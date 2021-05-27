@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="30dp"
+    android:background="@drawable/rounded_corner"
+    android:elevation="10dp">
+
+    <TextView
+        android:id="@+id/tv_data_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/data_customer"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_nama_customer_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/nama_customer"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data_customer" />
+
+    <TextView
+        android:id="@+id/tv_nama_customer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_medium"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_nama_customer_judul"
+        app:layout_constraintTop_toBottomOf="@+id/tv_data_customer"
+        tools:text="Nama Customer" />
+
+    <TextView
+        android:id="@+id/tv_no_meja_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/nomor_meja"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nama_customer_judul" />
+
+    <TextView
+        android:id="@+id/tv_no_meja"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_medium"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_no_meja_judul"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nama_customer"
+        tools:text="Nomor Meja" />
+
+    <TextView
+        android:id="@+id/tv_tgl_reservasi_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/tanggal_reservasi"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_no_meja_judul" />
+
+    <TextView
+        android:id="@+id/tv_tgl_reservasi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_medium"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_tgl_reservasi_judul"
+        app:layout_constraintTop_toBottomOf="@+id/tv_no_meja"
+        tools:text="Tanggal Reservasi" />
+
+    <TextView
+        android:id="@+id/tv_sesi_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/sesi"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tgl_reservasi_judul" />
+
+    <TextView
+        android:id="@+id/tv_sesi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_medium"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_sesi_judul"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tgl_reservasi"
+        tools:text="Sesi" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/cancel"
+        app:cornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sesi_judul" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_lanjut_dialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/green"
+        android:text="@string/lanjut"
+        app:cornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sesi_judul" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

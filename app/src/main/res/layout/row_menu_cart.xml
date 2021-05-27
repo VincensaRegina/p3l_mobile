@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.chauthai.swipereveallayout.SwipeRevealLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRevealLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+    <!-- Layout utk yg swipe dan muncul -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|end"
+            android:orientation="horizontal"
+            android:paddingStart="10dp"
+            android:layout_marginTop="5dp"
+            android:paddingEnd="20dp">
+
+            <ImageButton
+                android:id="@+id/imgbtn_edit"
+                android:layout_width="75dp"
+                android:layout_height="120dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/green"
+                android:src="@drawable/ic_baseline_edit_24"
+                android:text="@string/edit" />
+
+            <ImageButton
+                android:id="@+id/imgbtn_delete"
+                android:layout_width="75dp"
+                android:layout_height="120dp"
+                android:background="@drawable/rounded_corner"
+                android:backgroundTint="@color/red"
+                android:src="@drawable/ic_baseline_delete_24"
+                android:text="@string/delete" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Your main layout here -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/rounded_corner"
+            android:elevation="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_menu"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.012"
+                tools:src="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/tv_nama_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway_bold"
+                android:textColor="@color/dark_blue"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/img_menu"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Nama Menu" />
+
+            <TextView
+                android:id="@+id/tv_rp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_medium"
+                android:text="Rp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/img_menu"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nama_menu" />
+
+            <TextView
+                android:id="@+id/tv_harga_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tv_rp"
+                app:layout_constraintTop_toBottomOf="@+id/tv_nama_menu"
+                tools:text="Harga Menu" />
+
+            <TextView
+                android:id="@+id/tv_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/img_menu"
+                app:layout_constraintTop_toBottomOf="@+id/tv_harga_menu"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Qty" />
+
+            <TextView
+                android:id="@+id/tv_x_satuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:fontFamily="@font/raleway_medium"
+                android:text="x"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/tv_qty"
+                app:layout_constraintTop_toBottomOf="@+id/tv_harga_menu"
+                app:layout_constraintVertical_bias="0.242" />
+
+            <TextView
+                android:id="@+id/tv_subtotal_judul_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="52dp"
+                android:fontFamily="@font/raleway_medium"
+                android:text="Subtotal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="92dp"
+                android:fontFamily="@font/raleway_medium"
+                android:text="Rp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subtotal_judul_cart"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_subtotal_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway_medium"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView2"
+                app:layout_constraintTop_toBottomOf="@+id/tv_subtotal_judul_cart"
+                app:layout_constraintVertical_bias="0.0"
+                tools:text="Subtotal" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+</com.chauthai.swipereveallayout.SwipeRevealLayout>

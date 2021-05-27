@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/raleway_bold"
+            android:text="Menu Hari Ini"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/raleway_medium"
+            android:text="Spesial untuk Anda"
+            android:textSize="15sp" />
+
+        <!-- Recycler View Jenis Menu -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_jenis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:listitem="@layout/row_jenis" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            shimmer:duration="800">
+
+            <!-- Adding ...  rows of placeholders -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include layout="@layout/data_placeholder_layout" />
+
+                <include layout="@layout/data_placeholder_layout" />
+
+                <include layout="@layout/data_placeholder_layout" />
+
+                <include layout="@layout/data_placeholder_layout" />
+
+                <include layout="@layout/data_placeholder_layout" />
+
+                <include layout="@layout/data_placeholder_layout" />
+
+                <include layout="@layout/data_placeholder_layout" />
+
+                <include layout="@layout/data_placeholder_layout" />
+            </LinearLayout>
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <!-- Recycler View Menu -->
+        <!-- gatau kenapa kalo pake constraint jd kepotong 2 menu dibawah-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rv_jenis"
+            tools:listitem="@layout/row_menu" />
+    </LinearLayout>
+
+    <!-- Adding bottom sheet after main content -->
+    <include android:id="@+id/bottom_sheet_detail" layout="@layout/bottom_sheet_detail"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/red"
+        android:contentDescription="@string/qr_code"
+        android:src="@drawable/ic_baseline_qr_code_scanner_24"
+        app:borderWidth="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976"
+        app:tint="@android:color/white" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

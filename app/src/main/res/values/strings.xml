@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Atma Korean BBQ</string>
+    <string name="title_activity_menu1">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="makanan_utama">Makanan Utama</string>
+    <string name="makanan_side_dish">Makanan Side Dish</string>
+    <string name="minuman">Minuman</string>
+    <string name="qr_code">QR code</string>
+    <string name="batal">Batal</string>
+    <string name="lanjut">Lanjut</string>
+    <string name="sesi">Sesi</string>
+    <string name="tanggal_reservasi">Tanggal Reservasi</string>
+    <string name="nomor_meja">Nomor Meja</string>
+    <string name="nama_customer">Nama Customer</string>
+    <string name="data_customer">Data Customer</string>
+    <string name="cancel">Cancel</string>
+    <string name="kuantitas">Kuantitas</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="save">Save</string>
+    <string name="total_harga">Total Harga</string>
+    <string name="lanjutkan_transaksi">Lanjutkan Transaksi</string>
+    <string name="pemesanan_selesai">Pemesanan Selesai</string>
+    <string name="terima_kasih">Terima Kasih!</string>
+    <string name="info_bayar">Pesanan anda akan segera diproses! Silahkan menuju kasir untuk melakukan pembayaran.</string>
+    <string name="kembali_ke_menu_utama">Kembali ke Menu Utama</string>
+    <string name="detail">Detail</string>
+    <string name="deskripsi">Deskripsi</string>
+    <string name="rp">Rp</string>
+    <string-array name="jenis_menu">
+        <item>Makanan Utama</item>
+        <item>Makanan Side Dish</item>
+        <item>Minuman</item>
+    </string-array>
+</resources>

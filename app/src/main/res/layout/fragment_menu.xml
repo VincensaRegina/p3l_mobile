@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.menu.MenuFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/raleway_bold"
+        tools:text="Welcome, John Doe"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/raleway_medium"
+        android:text="Spesial untuk Anda"
+        android:textSize="15sp" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/tv_judul"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="110dp"-->
+<!--        android:layout_marginTop="24dp"-->
+<!--        android:src="@drawable/akb_resto_side"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!-- Recycler View Jenis Menu -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_jenis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="8dp"
+        tools:listitem="@layout/row_jenis" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        shimmer:duration="800"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <!-- Adding ...  rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/data_placeholder_layout" />
+
+            <include layout="@layout/data_placeholder_layout" />
+
+            <include layout="@layout/data_placeholder_layout" />
+
+            <include layout="@layout/data_placeholder_layout" />
+
+            <include layout="@layout/data_placeholder_layout" />
+
+            <include layout="@layout/data_placeholder_layout" />
+
+            <include layout="@layout/data_placeholder_layout" />
+
+            <include layout="@layout/data_placeholder_layout" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <!-- Recycler View Menu -->
+    <!-- gatau kenapa kalo pake constraint jd kepotong 2 menu dibawah-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="50dp"
+        android:paddingBottom="8dp"
+        tools:listitem="@layout/row_menu_pesan" />
+    </LinearLayout>
+    <!-- Adding bottom sheet after main content -->
+    <include android:id="@+id/bottom_sheet_detail" layout="@layout/bottom_sheet_detail_pesan"/>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

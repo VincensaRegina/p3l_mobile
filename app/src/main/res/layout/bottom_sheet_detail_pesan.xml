@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bottom_sheet_detail"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corner_bs_detail"
+    android:elevation="10dp"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingBottom="80dp"
+    app:behavior_hideable = "true"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+    <!--  app:layout_behavior: This attribute makes the layout act as bottom sheet.
+    The value should be android.support.design.widget.BottomSheetBehavior-->
+    <!--    app:behavior_peekHeight: This is the height of the bottom sheet when it is minimized.-->
+    <!--    app:behavior_hideable: Makes bottom sheet hidden when swiped it down.-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_menu_detail"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@android:color/darker_gray" />
+
+
+    <!-- Nama Menu-->
+    <TextView
+        android:id="@+id/tv_nama_menu_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/raleway_bold"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img_menu_detail"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Nama Menu" />
+
+    <!-- Harga-->
+    <TextView
+        android:id="@+id/tv_rp_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/rp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/img_menu_detail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nama_menu_detail" />
+
+    <TextView
+        android:id="@+id/tv_harga_menu_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/raleway_bold"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_rp_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_nama_menu_detail"
+        tools:text="Harga" />
+
+    <!-- Serving size-->
+
+    <!-- Unit-->
+    <TextView
+        android:id="@+id/tv_serv_size_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_medium"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@+id/img_menu_detail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_rp_detail"
+        tools:text="Serving Size" />
+
+    <TextView
+        android:id="@+id/tv_unit_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/raleway_medium"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_serv_size_detail"
+        app:layout_constraintTop_toBottomOf="@+id/tv_harga_menu_detail"
+        tools:text="Unit" />
+
+    <TextView
+        android:id="@+id/tv_deskripsi_title_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_bold"
+        android:text="@string/deskripsi"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_menu_detail" />
+
+    <!-- Deskripsi-->
+    <TextView
+        android:id="@+id/tv_deskripsi_detail"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/raleway_medium"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_deskripsi_title_detail"
+        tools:text="Deskripsi" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
